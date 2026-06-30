@@ -1,0 +1,37 @@
+Copyright © 2026 Heartless. All rights reserved.
+
+FAT32 Driver Library (Bare-Metal / Kernel Level)
+
+This software is the exclusive property of the author.
+
+PERMITTED USE (PRIVATE ONLY)
+You are allowed to use, copy, and modify this software solely for personal
+or private non-commercial purposes, including experimental development,
+bare-metal systems, and operating system kernel projects.
+
+RESTRICTIONS
+You are NOT allowed to:
+- Redistribute this software in source or binary form
+- Publish or share modified or unmodified versions
+- Sublicense, sell, or lease this software
+- Use this software in any commercial product or service
+- Incorporate this software into paid, closed, or proprietary systems
+
+COMMERCIAL USE
+Any commercial use, distribution, monetization, or inclusion in products,
+firmware, operating systems, or hardware requires explicit prior written
+permission from the author.
+
+DERIVATIVE WORKS
+Any modified or derived version of this software is still subject to these
+same terms and remains the intellectual property of the author unless
+explicit permission is granted.
+
+PERMISSION CONTACT
+Email: heartlessalt01@gmail.com
+       heartlesalt01@gmail.com
+
+DISCLAIMER
+This software is provided "AS IS", without warranty of any kind, express
+or implied, including but not limited to fitness for a particular purpose,
+reliability, or non-infringement.
