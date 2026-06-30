@@ -42,7 +42,6 @@
  */
 
 #include "fat32.h"
-
 #include "fat32_core.c"
 #include "fat32_dirent.c"
 #include "fat32_path.c"
