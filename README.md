@@ -33,23 +33,25 @@ NVMe/ramdisk/whatever) — the driver never touches hardware directly:
 #include "fat32.h"
 
 static int my_disk_read(void *ctx, uint32_t lba, uint32_t count, void *buffer) {
-
+    // read `count` sectors starting at LBA `lba` into `buffer`
+    // return 0 on success, nonzero on failure
 }
 
 static int my_disk_write(void *ctx, uint32_t lba, uint32_t count, const void *buffer) {
-
+    // write `count` sectors starting at LBA `lba` from `buffer`
+    // return 0 on success, nonzero on failure
 }
 
 fat_blockdev_t dev = {
     .read = my_disk_read,
     .write = my_disk_write,
-    .ctx = NULL,          
+    .ctx = NULL,          // passed back to your callbacks, use for device handle
     .sector_size = 512
 };
 
 fat32_volume_t vol;
 fat_status_t st = fat32_mount(&vol, &dev, /*read_only=*/false);
-
+```
 
 Since you mentioned you don't have a disk driver yet (only WAV codec
 drivers so far) — `my_disk_read`/`my_disk_write` are the next thing you'll
@@ -78,7 +80,7 @@ fat_dir_iter_t it;
 fat32_dir_open(&vol, "/", &it);
 fat_dirent_info_t info;
 while (fat32_dir_read(&it, &info) == FAT_OK) {
-    
+    // info.name, info.attr, info.size, info.first_cluster
 }
 fat32_dir_close(&it);
 ```
