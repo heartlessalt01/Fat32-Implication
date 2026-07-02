@@ -24,12 +24,10 @@ You must provide block device callbacks. The driver does not access hardware dir
 #include "fat32.h"
 
 static int my_disk_read(void *ctx, uint32_t lba, uint32_t count, void *buffer) {
-    // Read sectors starting at LBA into buffer
     return 0;
 }
 
 static int my_disk_write(void *ctx, uint32_t lba, uint32_t count, const void *buffer) {
-    // Write sectors from buffer starting at LBA
     return 0;
 }
 
@@ -72,7 +70,6 @@ fat_dirent_info_t info;
 
 fat32_dir_open(&vol, "/", &it);
 while (fat32_dir_read(&it, &info) == FAT_OK) {
-    // iterate files
 }
 fat32_dir_close(&it);
 ```
